@@ -1,5 +1,5 @@
 exports.min = function min(array) {
-    // [0,1,2,5,3,6,1]
+
     if (Array.isArray(array) && array.length >= 1) {
         let length = array.length;
         if (length === 1) return array;
