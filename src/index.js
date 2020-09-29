@@ -39,5 +39,11 @@ exports.max = function max(array) {
 }
 
 exports.avg = function avg(array) {
+    if (Array.isArray(array) && array.length >= 1) {
+        let length = array.length;
+        if (length === 1) return array;
+        const reducer = (accumulator, value) => accumulator + value;
+        return array.reduce(reducer) / length;
+    }
     return 0;
 }
